@@ -7,10 +7,48 @@
     <style>
         body { margin: 0; padding: 0; overflow: hidden; background: #EBEEF2; display: flex; justify-content: center; align-items: center; height: 100vh; touch-action: none; }
         canvas { display: block; box-shadow: 0 0 0px rgba(0,0,0,0.5); }
+
+        /* CTA Yazısı Stili */
+        .cta-link {
+            position: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 11px;
+            color: #333;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-link:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* Desktop: Sağ alt */
+        @media (min-width: 768px) {
+            .cta-link {
+                right: 20px;
+                bottom: 20px;
+            }
+        }
+
+        /* Mobil: Alt orta */
+        @media (max-width: 767px) {
+            .cta-link {
+                bottom: 25px;
+                left: 50%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+            }
+        }
     </style>
 </head>
 <body>
     <canvas id="canvas"></canvas>
+
+    <a href="BURAYA_ETSY_LINKINI_YAPISTIR" target="_blank" class="cta-link">WANNA MAKE YOURS?</a>
 
 <script>
 // --- DİNAMİK GÖRSEL AYARI ---
